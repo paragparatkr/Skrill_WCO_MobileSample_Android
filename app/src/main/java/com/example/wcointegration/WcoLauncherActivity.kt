@@ -66,7 +66,7 @@ class WcoLauncherActivity : AppCompatActivity() {
      *    https://developer.android.com/studio/write/app-link-indexing
      */
     private fun maybeHandleCheckoutRedirect(intent: Intent?) {
-        if (intent?.data?.host == getString(R.string.your_domain)) {
+        if (intent?.data?.host == "viktormitev1.github.io") {
             statusTextView.visibility = View.VISIBLE
             // redirect from Wallet Checkout, maybe poll for transaction status
         }

@@ -35,10 +35,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="http" />
                 <data android:scheme="https" />
-
-                <data android:host="@string/your_domain" />
+                <data android:host="viktormitev1.github.io" />
             </intent-filter>
         </activity>
     </application>
