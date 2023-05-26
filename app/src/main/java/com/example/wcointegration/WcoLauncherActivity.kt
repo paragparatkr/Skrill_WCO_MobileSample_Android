@@ -41,14 +41,26 @@ class WcoLauncherActivity : AppCompatActivity() {
         goToCheckoutButton.setOnClickListener {
             it.visibility = View.GONE
             // TODO openInBrowser() with generated Checkout url
+
             // The url have to contain return_url parameter in order for the app to be called back when the Checkout is done.
-            // For test purposes you may use https://viktormitev1.github.io
+            // Alternatively url with Session ID as parameter could be loaded. It's still a valid approach as long as
+            // return_url parameter is passed to the request that returns Skrill Wallet Checkout session ID
+
             // For more options refer to Skrill Checkout integration guide at https://www.skrill.com/en/business/integration/
+
+            // This sample uses return_url=https://viktormitev1.github.io which is registered as Android App Links.
+
 //            openInBrowser(
 //                Uri.parse(
-//                    "<domain>/?<params>&return_url=https://viktormitev1.github.io"
+//                    "https://pay.eu-qa.sandbox.dw-cloud.net/" +
+//                            "?merchant_id=326390328&amount=6" +
+//                            "&currency=USD" +
+//                            "&pay_from_email=us.customer.1243@sun-fish.com" +
+//                            "&payment_methods=WLT" +
+//                            "&return_url=https://viktormitev1.github.io"
 //                )
 //            )
+
             Toast.makeText(this, R.string.prompt_load_checkout, Toast.LENGTH_LONG).show()
         }
     }
@@ -72,11 +84,6 @@ class WcoLauncherActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * @param uri The uri have to contain return_url parameter in order for the app to be called back when the Checkout is done
-     * (may also contain cancel_url parameter in order for the app to be called back if the transaction is canceled/failed.
-     * For more info refer to Skrill Checkout integration guide at https://www.skrill.com/en/business/integration/)
-     */
     private fun openInBrowser(uri: Uri) {
         startActivity(Intent(Intent.ACTION_VIEW, uri))
     }
