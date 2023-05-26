@@ -25,7 +25,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".WcoLauncherActivity"
+        <activity
+            android:name=".WcoLauncherActivity"
             android:exported="true"
             android:launchMode="singleTop">
 
@@ -35,8 +36,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="https" />
-                <data android:host="viktormitev1.github.io" />
+                <!-- Replace with your domain -->
+                <data
+                    android:host="@string/your_domain"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
     </application>

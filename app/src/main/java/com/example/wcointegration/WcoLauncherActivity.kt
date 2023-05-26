@@ -59,16 +59,16 @@ class WcoLauncherActivity : AppCompatActivity() {
      * For this to work, a number of things need to be set up:
      * 1. Provide your domain as a redirect_url parameter for the Checkout url
      * 2. Add an intent filter to receive redirects to the Android manifest.
-     *    In this example, replace the value of the resource`R.string.your_domain` with your domain
+     *    In this example, replace the value of the resource `R.string.your_domain` with your domain
      * 3. Host a `.well-known/assetlinks.json` file on your domain as explained here:
      *    https://developer.android.com/training/app-links/verify-android-applinks
      *    Step-by-step guide how to add Android App Links:
      *    https://developer.android.com/studio/write/app-link-indexing
      */
     private fun maybeHandleCheckoutRedirect(intent: Intent?) {
-        if (intent?.data?.host == "viktormitev1.github.io") {
+        if (intent?.data?.host == getString(R.string.your_domain)) {
             statusTextView.visibility = View.VISIBLE
-            // redirect from Wallet Checkout, maybe poll for transaction status
+            // redirect from Skrill Checkout, maybe poll for transaction status
         }
     }
 
