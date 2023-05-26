@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Wallet Checkout integration</string>
+    <string name="prompt_load_checkout">TODO: implement Skrill Checkout loading!</string>
 </resources>

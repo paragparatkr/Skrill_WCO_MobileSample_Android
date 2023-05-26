@@ -21,8 +21,8 @@ intercept that url and get back to foreground again.
 
 ## About this sample
 [GitHub Pages](https://github.com/viktormitev1/viktormitev1.github.io) is used to host the *.well-known/assetlinks.json* for simplicity. 
-Note that a debug certificate is used to generate the json file used in the sample which means that auto verification won't work anywhere and 
-disambiguation dialog will appear on loading the *return_url*. This should not be the case with release certificate.
+Note that a keystore is added to the project and used for debug builds. That allows the project, being run on multiple machines, to use the same 
+certificate and to relate correctly with the SHA-256 defined in the *.well-known/assetlinks.json* meaning the auto verification will work anywhere.
 
 ## Running the app
-No special steps required to run the app. Import the project in Android Studio and run it.
+No special steps required to run the app. Import the project in Android Studio, select **debug** build type and run it.
