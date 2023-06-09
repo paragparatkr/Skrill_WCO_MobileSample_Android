@@ -20,7 +20,7 @@ be able to intercept that url and get back to foreground again.
 4. Define proper *launchMode* for the  Activity that handles the *App Links* depending on your needs.
 
 ## About this sample
-[GitHub Pages](https://github.com/viktormitev1/viktormitev1.github.io) is used to host the *.well-known/assetlinks.json* for simplicity. 
+[GitHub Pages](https://github.com/viktormitevLJ/viktormitevLJ.github.io) is used to host the *.well-known/assetlinks.json* for simplicity. 
 Note that a keystore is added to the project and used for debug builds. That allows the project, being run on multiple machines, to use the same 
 certificate and to relate correctly with the SHA-256 defined in the *.well-known/assetlinks.json* meaning the auto verification will work anywhere.
 

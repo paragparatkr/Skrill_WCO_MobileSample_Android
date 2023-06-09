@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="your_domain">viktormitev1.github.io</string>>
+    <!-- TODO replace with your domain -->
+    <string name="your_domain">viktormitevlj.github.io</string>>
 </resources>
