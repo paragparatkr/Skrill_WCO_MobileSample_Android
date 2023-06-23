@@ -1,4 +1,4 @@
-Sample Android project aiming to provide guidelines for Skrill Checkout integration.
+Sample Android project aiming to provide guidelines for Skrill Payment Method integration.
 
 ## Overview
 On June 30, the US bank Chase stops supporting in-process webview traffic. This topic raises the need for updated Skrill Checkout integration 
