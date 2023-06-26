@@ -48,17 +48,11 @@ class WcoLauncherActivity : AppCompatActivity() {
 
             // For more options refer to Skrill Checkout integration guide at https://www.skrill.com/en/business/integration/
 
-            // This sample uses return_url=https://viktormitevlj.github.io which is registered as Android App Link.
+            // This sample uses return_url=https://merchantwebsite.com which is registered as Android App Link.
 
 //            openInBrowser(
 //                Uri.parse(
-//                    "https://pay.eu-qa.sandbox.dw-cloud.net/" +
-//                            "?merchant_id=326390328" +
-//                            "&amount=6" +
-//                            "&currency=USD" +
-//                            "&pay_from_email=us.customer.1243@sun-fish.com" +
-//                            "&payment_methods=WLT" +
-//                            "&return_url=https://viktormitevlj.github.io"
+//                    "https://api.test.paysafe.com/alternatepayments/v1/redirect?accountId=1001461040&paymentHandleId=780b199c-12a1-402d-81a0-78bb6ceaee5e&token=eyJhbGciOiJIUzI1NiJ9.eyJhY2QiOiIxMDAxNDYxMDQwIiwicHlkIjoiNzgwYjE5OWMtMTJhMS00MDJkLTgxYTAtNzhiYjZjZWFlZTVlIiwiZXhwIjoxNjg3Nzg4NDExfQ.C94huXAAl3XxiLSLQgCH1bjDo2lytgjGVbK8J3korfI" 
 //                )
 //            )
 
