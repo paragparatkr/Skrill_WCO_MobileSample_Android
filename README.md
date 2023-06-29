@@ -1,7 +1,7 @@
 Sample Android project aiming to provide guidelines for Skrill Payment Method integration via Payments API.
 
 ## Overview
-On June 30, the US bank Chase stops supporting in-process webview traffic. This topic raises the need for updated Skrill payment method integration 
+On September 30, the US-bank **Chase** stops supporting in-process webview traffic. This topic raises the need for updated Skrill payment method integration 
 guidelines for mobile applications.
 
 Our recommendation is to start Skrill in a browser or Custom Tabs. An essential part of being able to keep a good UX is to be able to 
