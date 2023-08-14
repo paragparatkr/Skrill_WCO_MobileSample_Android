@@ -42,23 +42,11 @@ class WcoLauncherActivity : AppCompatActivity() {
             it.visibility = View.GONE
             // TODO openInBrowser() with generated Checkout url
 
-            // The url have to contain return_url parameter in order for the app to be called back when the Checkout is done.
-            // Alternatively url with Session ID as parameter could be loaded. It's still a valid approach as long as
-            // return_url parameter is passed to the request that returns Skrill Wallet Checkout session ID
-
-            // For more options refer to Skrill Checkout integration guide at https://www.skrill.com/en/business/integration/
-
-            // This sample uses return_url=https://viktormitevlj.github.io which is registered as Android App Link.
+            // This sample uses return_url=https://viktormitevlj.github.io which is registered as Android App Link. This return url is passed in "return_links" in paymentHandles creation request.
 
 //            openInBrowser(
 //                Uri.parse(
-//                    "https://pay.eu-qa.sandbox.dw-cloud.net/" +
-//                            "?merchant_id=326390328" +
-//                            "&amount=6" +
-//                            "&currency=USD" +
-//                            "&pay_from_email=us.customer.1243@sun-fish.com" +
-//                            "&payment_methods=WLT" +
-//                            "&return_url=https://viktormitevlj.github.io"
+//                    "https://api.test.paysafe.com/alternatepayments/v1/redirect?accountId=1001461040&paymentHandleId=16c4530a-686a-4cd1-b1c7-7deaf4280750&token=eyJhbGciOiJIUzI1NiJ9.eyJhY2QiOiIxMDAxNDYxMDQwIiwicHlkIjoiMTZjNDUzMGEtNjg2YS00Y2QxLWIxYzctN2RlYWY0MjgwNzUwIiwiZXhwIjoxNjkyMDE1NjQxfQ.ZMMv0fqOv59_PAfOc_lLQMoW4fjVqunG9XesGn2ubdI"
 //                )
 //            )
 
@@ -70,7 +58,7 @@ class WcoLauncherActivity : AppCompatActivity() {
      * When the Wallet Checkout is done the user will get redirected to your application.
      *
      * For this to work, a number of things need to be set up:
-     * 1. Provide your domain as a redirect_url parameter for the Checkout url
+     * 1. Provide your domain as a return_url parameter for the Checkout url
      * 2. Add an intent filter to receive redirects to the Android manifest.
      *    In this example, replace the value of the resource `R.string.your_domain` with your domain
      * 3. Host a `.well-known/assetlinks.json` file on your domain as explained here:
